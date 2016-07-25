@@ -1,0 +1,581 @@
+@mixin curso($color, $color-dark, $borde){
+	background: white;
+	
+	.navbar{
+		background: $color-dark;
+	}
+
+	header.curso{
+		background: white;
+		color: $color;
+		padding: 50px 0;
+		margin-bottom: 50px;
+		border:0;
+		border-bottom:8px;
+		border-image:url($borde) 30 0 round;
+		p{
+			font-size: 16px;
+			font-weight: 300;
+			max-width: 500px;
+			@media (max-width: 992px){
+				margin-bottom: 30px;
+			}
+		}
+
+		h1{
+			margin-top: 50px;
+			@media (max-width: 992px){
+				margin-top: 30px;
+			}
+		}
+
+		.cta{
+			margin-top: 20px;
+			margin-bottom: 30px;
+			color: $color;
+			border-color: $color;
+
+		}
+	}
+
+	.un-curso{
+		padding: 50px 0;
+	}
+
+	.modulo{
+		box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+		margin: auto;
+		margin-bottom: 30px;
+		background:white;
+		max-width: 300px;
+
+		header{
+			background: $color;
+			color: white;
+			padding: 20px 10px 10px 10px;
+			h1{
+				font-size: 28px;
+				margin: 3px 0;
+				font-weight: 300;
+				font-family: $main-font;
+			}
+			h3{
+				font-size: 16px;
+				margin: 0;
+				font-weight: 300;
+				font-family: $main-font;
+			}
+			hr{
+				width: 60px;
+				color: white;
+				margin: 10px auto;
+			}
+			p{
+				margin-bottom: 0;
+			}
+		}
+
+		.nivel{
+			background: $color-dark;
+			padding: 10px;
+			color: white;
+			height: 40px;
+			span{	
+				font-size: 15px;
+			}
+		}
+
+		.contenido{
+			padding: 10px;
+			ul.tecnologias{
+				margin: 15px auto;
+				text-align: center;
+				padding: 0;
+				li{
+					background: $color;
+					display: inline-block;
+					padding: 5px;
+					width: 40px;
+					height: 40px;
+					text-align: center;
+					margin: 0 10px;
+					border-radius: 50%;
+					span{
+						color: white;
+						font-size: 28px;
+						position: relative;
+						top: 2px;
+					}
+				}
+			}
+
+			hr{
+				margin-bottom: 10px;
+				margin-top: 10px;
+			}
+			
+			.pagos{
+				p{
+					color: $color-dark;
+					font-size:18px;
+					strong{
+						font-size: 25px;
+						position: relative;
+						top: 5px;
+					}
+				}
+
+				a{	
+					background: $color;
+					color: white;
+					padding: 10px 20px;
+					margin-top: 10px;
+					display: inline-block;
+					width: 100%;
+				}
+			}	
+		}		
+	
+		&.curso{
+			transform: scale(1.05);
+			background: $color;
+			header{
+				background: white;
+				color: $color;
+				hr{
+					color: $color;
+				}
+			}
+
+			.nivel{
+				background: white;
+				box-shadow: 0 1px 0 #DDD inset;
+				p{
+					color: red;
+					font-weight: 700;
+					font-size: 18px;
+					margin: 0;
+					text-align: center;	
+				}
+			}
+
+			.contenido{
+				p{
+					color: white;
+				}
+				ul.tecnologias{
+					li{
+						background:white;
+						span{
+							color: $color;
+						}
+					}
+				}
+				a{
+					background: white;
+					color: $color;
+				}
+			}
+		}
+	}
+
+
+	.curso-info{
+		position: relative;
+		top: -20px;
+		padding-bottom: 20px;
+		h2{
+			background:$color;
+			color: white;
+			padding: 10px 20px;
+			small{
+				color: white;
+			}
+			&:before{
+				content: "";
+				display: block;
+				width: 20px;
+				height: 20px;
+				background: $color;
+				position: relative;
+			    position: absolute;
+			    top: 10px;
+			    transform: rotate(45deg);
+			    left: 140px;
+			}
+		}
+		.datos{
+			display: flex;
+			margin-top: 10px;
+			padding:0;
+			li{
+				display: inline-block;
+				flex: 1;
+				text-align: center;
+				.dato{
+					display: inline-block;
+					font-size: 35px;
+					background: $color;
+					border-radius:50%;
+					height: 80px;
+					width: 80px;
+					color: white;
+					padding-top:28px;
+					text-align: center;
+					font-weight: 400;
+					letter-spacing: -1px;
+				}
+				.info{
+					display: block;
+					font-size: 16px;
+					text-transform:uppercase;
+					margin-top: 10px;
+					line-height: 16px;
+				}
+			}
+
+			@media (max-width:600px){
+				display: block;
+				
+				li{
+					display: block;
+					overflow: auto;
+					margin: 10px 0;
+					.dato{
+						font-size: 18px;
+						height: 45px;
+						width: 45px;
+						padding-top: 11px;
+						letter-spacing: 0;
+						float: left;
+					}
+					.info{
+						float: left;	
+						left: 20px;
+						position: relative;
+					}
+				}
+			}	
+		}
+
+		.unidades{
+			display: flex;
+			margin-top: 30px;
+			flex-wrap: wrap;
+			article{
+				flex: 1;
+				text-align:center;
+
+				&:not(:last-child){
+					border-right: 1px solid #CCC;
+				}
+
+				@media (max-width: 1200px){
+					flex: auto;
+					width: 33%;
+					border: none !important;
+				}
+
+				@media (max-width: 720px){
+					width: 49%;
+				}
+
+
+				@media (max-width: 500px){
+					width: 100%;
+					text-align: left;
+					&:not(:last-child){
+						border-bottom: 1px solid #CCC !important;
+						margin-bottom: 15px;
+					}
+				}
+
+
+				h4{
+					color: $color;
+				}
+
+				ul{
+					padding: 0;
+					list-style: none;
+					li{
+						
+					}
+				}
+			}
+		}
+
+		.cta{
+			margin-top: 50px;
+		}
+
+		.fechas{
+			margin-top: 30px;
+			background: #eee;
+			h3{
+				text-align: center;
+				padding-top:10px; 
+			}
+
+			.calendario{
+				display: flex;
+				margin-top: 30px; 
+				article{
+					flex: 1;
+					text-align: left;
+					padding-left:15px;
+					
+					h4{
+						color: $color;
+					}
+
+					ul{
+						padding: 0;
+						list-style: none;
+						li{
+							
+						}
+					}
+
+					a{
+						background:$color;
+						color: white;
+						border-radius:0;
+					}
+				}
+			}
+		}
+	}
+
+
+	.descripcion{
+		background: url("http://art-haus.artistsmilepost.net/files/2015/03/coffee-iphone-macbook-slider-opt.jpg");
+		background-size:cover;
+		background-attachment: fixed;
+		background-position-y:300px;
+		.overlay{
+			padding: 50px;
+			background: rgba(0,0,0,0.8);
+
+		}
+		h1{
+			color: white;
+
+		}
+		h2{
+			color: white;
+			font-size: 25px;
+			letter-spacing: -1px;
+			margin: 30px 0;
+		}
+
+		p{
+			color: white;
+			font-size: 18px;
+			font-weight: 300;
+			line-height: 40px;
+			max-width: 800px;
+			margin: auto;			
+		}
+
+		@media (max-width:768px){
+			h1{
+				font-size: 28px;
+			}
+			p{
+				font-size: 16px;
+				line-height: 25px;
+			}
+			h2{
+				font-size: 20px;
+				font-weight: 400;
+			}
+		} 
+
+		hr{
+			max-width: 100px;
+			margin: 30px auto;
+		}
+
+		.work{
+			background: white;
+			color: #444;
+			padding-bottom: 15px;
+			margin: auto;
+			max-width: 300px;
+			margin-bottom: 20px;
+			h4{
+				margin-top: 30px;
+				margin-bottom: 0;
+			}
+			p{
+				font-size: 12px;
+				color: #444;
+			}
+		}
+	}
+
+	.inicios{
+		padding: 20px 0 50px 0;
+		margin-bottom: 20px;
+		h3{
+			margin: 30px 0;
+			text-align: center;
+		}
+		article{
+			color: #444;
+			box-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+			max-width: 300px;
+			margin: auto;
+			margin-bottom: 20px;
+			h4{
+				background: $color-dark;
+				padding: 15px 15px;
+				margin: 0;
+				text-align: center;
+				color: white;
+			    font-size: 15px;
+			    font-weight: 400;
+
+			}
+			.contenido{
+				padding: 15px;
+
+				.pricing{
+					text-align: center;
+					span{
+						margin: 0;
+					}
+					h2{
+						margin: 0px;
+						font-size: 24px;
+					}
+				}
+			}
+			p{
+				margin: 0;
+				text-align: center;
+				font-size: 16px;
+			}
+
+			a{
+				margin-top: 20px;
+			}
+			.cont-temprana{
+				text-align: center;
+				h3{
+					margin: 15px 0;
+					&.temprana{
+						position: relative;
+						display: inline-block;
+						&:after{
+						    content: "";
+						    display: inline-block;
+						    position: absolute;
+						    height: 2px;
+						    width: 100px;
+						    background: red;
+						    left: 0;
+						    top: 10px;
+						    transform: rotate(-9deg);
+						}
+					}
+				}	
+			}
+		}	
+	}
+
+	#profesores{
+		padding: 80px;
+		.info{
+			margin-bottom: 30px;
+			@media (max-width: 768px){
+				text-align: center;
+			}
+		}
+		.profesor{
+			border: 1px solid #ccc;
+			padding:20px 0;
+			max-width: 300px;
+			margin: auto;
+			margin-bottom: 20px;
+
+			h3{
+				font-size: 20px;
+				letter-spacing: -1px;
+			}
+			h5{
+				font-family: Roboto, Arial, Helvetica, sans-serif;
+				font-weight: 400;
+			}
+		}
+	}
+	.mas-info{
+		h2{
+			font-size: 22px;
+			max-width: 600px;
+			margin: auto;
+			margin-top: 20px;
+		}
+		form{
+			input{
+				max-width: 300px;
+			    padding: 30px;
+			    margin-bottom: 10px;
+			    font-family: roboto;
+			    font-size: 16px;
+			    font-weight: 300;
+			    margin: 0 auto 20px auto;
+			    border: none;
+			} 
+			input[type=submit]{
+				padding: 20px 30px;
+				margin-bottom: 0;
+				border-radius: 4px;
+				left: 0;
+				width: 300px;
+				margin-top: 10px;
+			}
+		}
+	}
+
+
+	#remoto{
+		padding: 50px 0;
+		background: #eee;
+		span{
+			border: 3px solid $color-dark;
+			font-size: 50px;
+		    background: $color;
+		    color: white;
+		    width: 100px;
+		    display: inline-block;
+		    height: 100px;
+		    border-radius: 50%;
+		    padding-top: 12px
+		}
+	}
+}
+
+
+#seccion-cursos{
+	&.disenador-web{
+		@include curso($disenador-web, $disenador-web-dark, "../assets/img/disenador-web-line.svg");
+	}
+	&.fullstack{
+		@include curso($fullstack, $fullstack-dark, "../assets/img/fullstack-line.svg");
+	}
+	&.movil{
+		@include curso($movil, $movil-dark, "../assets/img/movil-line.svg");
+	}
+	&.wordpress{
+		@include curso($wordpress, $wordpress-dark, "../assets/img/wordpress-line.svg");
+	}
+	&.diseno{
+		@include curso($diseno, $diseno-dark, "../assets/img/diseno-line.svg");
+	}
+	&.marketing{
+		@include curso($marketing, $marketing-dark, "../assets/img/marketing-line.svg");
+	}
+}
+

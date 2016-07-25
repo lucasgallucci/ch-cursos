@@ -1,0 +1,106 @@
+@media (min-width: 768px){
+.navbar{
+	border-radius:0;
+	background: none;
+	border:none;
+	margin: 0;
+}
+.navbar-nav>li {
+    padding: 10px 0;
+    margin: -10px auto;
+}	
+
+	.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+	    margin-top: 3px;
+	}
+}
+
+.navbar-brand {
+	padding:10px;
+	img{
+		max-width: 150px;
+	}
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: white;
+    font-size: 15px;
+}
+
+
+.navbar-nav>li>.dropdown-menu {
+    background: #222222;
+    @media (min-width: 768px){
+        margin-right: -180px;
+    	top: 63px;
+	}
+}
+
+.dropdown-menu>li>a {
+    font-weight: 300;
+    color: #DDD;
+}
+
+
+nav{
+	z-index:5;
+	h3{
+		color: $main-color;
+	    text-transform: uppercase;
+	    font-size: 18px;
+	    font-weight: 700;
+	}
+	.dropdown-menu{
+		.container{
+			max-width: 500px;
+		}
+		h2{
+			font-size: 15px;
+		    color: white;
+		    text-transform: uppercase;
+		    border-bottom: 1px solid $main-color;
+		    margin: 0px;
+		    line-height: 40px;
+		    position: relative;
+		    top: -5px;
+		}
+		ul{
+			list-style: none;
+			padding: 0;
+			li{
+				a{
+					color: #ccc;
+				    line-height: 30px;
+				    text-decoration: none;
+				    transition: 0.5s;
+				    &:hover{
+				    	color: $main-color;
+				    	padding-left:5px;
+				    	text-decoration: none;
+				    }
+				
+				}
+			}
+		}
+	}
+
+	.workshops{
+		hr{
+			margin-bottom: 10px;
+		}
+		ul{
+			li{
+				a{
+					&:hover{
+						padding-left: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+.navbar-nav>li>a {
+    padding-top: 16px;
+    padding-bottom: 17px;
+}

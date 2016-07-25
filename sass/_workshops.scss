@@ -1,0 +1,40 @@
+#seccion-workshops{
+	header{
+		color: white;
+		background: url("http://cdn.funcheap.com/wp-content/uploads/2015/05/workshop1.jpg");
+		background-size: cover;
+
+		.overlay{
+			padding: 80px 0;
+		}
+
+		p{
+			max-width: 500px;
+			margin: auto;
+		}
+	}
+	.un-workshop{
+		margin-bottom: 30px;
+		.avatar{
+			max-width: 50px;
+			display: block;
+			margin: auto;
+		}
+		h2{
+			margin: 0;
+			margin-top: 10px;
+			font-size: 20px;
+		}
+
+
+		@media (max-width: 996px){
+			margin-bottom: 40px;
+			text-align: center;
+			min-height: 270px;
+			.btn{
+				margin-top: 15px;
+			}
+		}
+	}
+}
+ 
